@@ -1,15 +1,8 @@
 const express = require("express");
 const app = express();
-
-const { createHash } = require("crypto");
-
-function hash(string) {
-  return createHash("sha256").update(string).digest("hex");
-}
-
+//<div class="secret" style="display: none;">HcUy6Re2LLBRtj</div>
 app.get("/", (req, res) => {
-  const encriptado = hash("Hola Mundo");
-  res.send("<h1>" + encriptado + "</h1>");
+  res.send("<h1> HcUy6Re2LLBRtj </h1>");
 });
 
 app.listen(3000, () => console.log("Listening on port 3000!"));
